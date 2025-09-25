@@ -21,7 +21,7 @@ app.get("/home", (req, res) => {
 });
 
 app.get("/signup", (req, res) => {
-  res.render("signupPage");
+  res.render("signup");
 });
 
 app.get("/login", (req, res) => {
