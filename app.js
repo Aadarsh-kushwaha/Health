@@ -16,19 +16,20 @@ app.use(methodOverride("_method"));
 app.use(express.static(path.join(__dirname, "/public"))); // static files serve
 
 // Routes
-app.get("/", (req, res) => {
+app.get("/home", (req, res) => {
   res.render("home"); // home.ejs render karega
 });
 
 app.get("/signup", (req, res) => {
-  res.render("signupPage"); // Make sure signupPage.ejs exists inside views folder
+  res.render("signupPage");
 });
 
 app.get("/login", (req, res) => {
-  res.render("login"); // Make sure login.ejs exists inside views folder
+  res.render("login"); 
 });
 
-// login POST route (skeleton)
+
+// login POST route 
 app.post("/login", async (req, res) => {
   const { email, password, rememberMe } = req.body;
   res.redirect("/"); // login hone ke baad home page pe bhej diya
